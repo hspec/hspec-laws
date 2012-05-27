@@ -14,7 +14,7 @@ import Test.Hspec.Monadic
 main :: IO ()
 main = hspecX $ do
   describe "List as a Monoid" $
-    shouldSatisfyMonoidLaws (Type :: Type [Int])
+    shouldSatisfyMonoidLaws (undefined :: [Int])
 ~~~
 
 Running this produces a nice spec.
@@ -22,13 +22,11 @@ Running this produces a nice spec.
 ~~~
 $ runhaskell Spec.hs
 List as a Monoid
-
-  mappend
-   - is associative
-
   mempty
    - mempty is a left identity
    - mempty is a right identity
+  mappend
+   - is associative
 
 Finished in 0.1142 seconds, used 0.0800 seconds of CPU time
 

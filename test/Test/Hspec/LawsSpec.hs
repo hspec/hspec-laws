@@ -21,7 +21,7 @@ spec :: Specs
 spec = do
   describe "shouldSatisfyMonoidLaws" $ do
     it "succeeds for a valid Monoid instance" $ do
-      hspecB (shouldSatisfyMonoidLaws (Type :: Type [Int])) `shouldReturn` True
+      hspecB (shouldSatisfyMonoidLaws (undefined :: [Int])) `shouldReturn` True
 
     it "fails for a broken Monoid instance" $ do
-      hspecB (shouldSatisfyMonoidLaws (Type :: Type Minus)) `shouldReturn` False
+      hspecB (shouldSatisfyMonoidLaws (undefined :: Minus)) `shouldReturn` False
