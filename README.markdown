@@ -21,6 +21,7 @@ Running this produces a nice spec.
 
 ~~~
 $ runhaskell Spec.hs
+
 List as a Monoid
   mempty
    - mempty is a left identity
