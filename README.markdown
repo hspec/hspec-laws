@@ -12,5 +12,6 @@ import Test.Hspec.Laws
 
 main :: IO ()
 main = hspecX $ do
-  describe "List as a Monoid" $ shouldSatisfyMonoidLaws (Type :: Type [Int])
+  describe "List as a Monoid" $
+    shouldSatisfyMonoidLaws (Type :: Type [Int])
 ~~~
