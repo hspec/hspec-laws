@@ -24,8 +24,8 @@ $ runhaskell Spec.hs
 
 List as a Monoid
   mempty
-   - mempty is a left identity
-   - mempty is a right identity
+   - is a left identity
+   - is a right identity
   mappend
    - is associative
 
