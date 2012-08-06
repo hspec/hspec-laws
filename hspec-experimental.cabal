@@ -16,7 +16,9 @@ library
   exposed-modules:
       Test.Hspec.Laws
   build-depends:
-      base, hspec-shouldbe, QuickCheck
+      base
+    , hspec >= 1.3
+    , QuickCheck
 
 test-suite spec
   type:
@@ -28,4 +30,19 @@ test-suite spec
   main-is:
       Spec.hs
   build-depends:
-      base, hspec-shouldbe, hspec-discover, hspec-experimental, QuickCheck
+      base
+    , hspec >= 1.3
+    , hspec-experimental
+    , QuickCheck
+
+test-suite README
+  type:
+      exitcode-stdio-1.0
+  ghc-options:
+      -Wall -Werror -pgmL pandoc-unlit
+  main-is:
+      README.lhs
+  build-depends:
+      base
+    , hspec-experimental
+    , hspec >= 1.3

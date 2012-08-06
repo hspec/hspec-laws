@@ -9,10 +9,10 @@ satisfy the Monoid laws.
 ~~~ {.haskell .literate}
 -- file Spec.hs
 import Test.Hspec.Laws
-import Test.Hspec.Monadic
+import Test.Hspec
 
 main :: IO ()
-main = hspecX $ do
+main = hspec $ do
   describe "List as a Monoid" $
     shouldSatisfyMonoidLaws (undefined :: [Int])
 ~~~

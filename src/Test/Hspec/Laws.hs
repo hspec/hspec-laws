@@ -4,9 +4,9 @@ module Test.Hspec.Laws (shouldSatisfyMonoidLaws) where
 import           Prelude
 import           Data.Monoid
 import           Test.QuickCheck
-import           Test.Hspec.ShouldBe
+import           Test.Hspec
 
-shouldSatisfyMonoidLaws :: (Eq a, Show a, Monoid a, Arbitrary a) => a -> Specs
+shouldSatisfyMonoidLaws :: (Eq a, Show a, Monoid a, Arbitrary a) => a -> Spec
 shouldSatisfyMonoidLaws t = do
   describe "mempty" $ do
     it "is a left identity" $ property $ \x ->
