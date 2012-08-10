@@ -1,6 +1,4 @@
 language: haskell
 
-install:
-    - cabal update
+before_install:
     - cabal install pandoc-unlit
-    - cabal install --enable-tests
