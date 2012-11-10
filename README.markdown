@@ -8,8 +8,8 @@ satisfy the Monoid laws.
 
 ~~~ {.haskell .literate}
 -- file Spec.hs
-import Test.Hspec.Laws
 import Test.Hspec
+import Test.Hspec.Laws
 
 main :: IO ()
 main = hspec $ do
@@ -24,12 +24,12 @@ $ runhaskell Spec.hs
 
 List as a Monoid
   mempty
-   - is a left identity
-   - is a right identity
+    - is a left identity
+    - is a right identity
+
   mappend
-   - is associative
+    - is associative
 
-Finished in 0.1142 seconds, used 0.0800 seconds of CPU time
-
+Finished in 0.1142 seconds
 3 examples, 0 failures
 ~~~

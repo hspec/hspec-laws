@@ -1,4 +1,1 @@
 language: haskell
-
-before_install:
-    - cabal install pandoc-unlit

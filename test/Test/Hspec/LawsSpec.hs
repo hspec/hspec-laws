@@ -2,7 +2,7 @@
 module Test.Hspec.LawsSpec (main, spec) where
 
 import           Test.Hspec
-import           Test.Hspec.Monadic (hspecB)
+import           Test.Hspec.Runner
 import           Test.QuickCheck
 
 import           Data.Monoid
@@ -22,7 +22,7 @@ spec :: Spec
 spec = do
   describe "shouldSatisfyMonoidLaws" $ do
     it "succeeds for a valid Monoid instance" $ do
-      hspecB (shouldSatisfyMonoidLaws (undefined :: [Int])) `shouldReturn` True
+      hspecWith defaultConfig (shouldSatisfyMonoidLaws (undefined :: [Int])) `shouldReturn` Summary 3 0
 
     it "fails for a broken Monoid instance" $ do
-      hspecB (shouldSatisfyMonoidLaws (undefined :: Minus)) `shouldReturn` False
+      hspecWith defaultConfig (shouldSatisfyMonoidLaws (undefined :: Minus)) `shouldReturn` Summary 3 2
