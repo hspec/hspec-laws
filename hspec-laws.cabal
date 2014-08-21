@@ -7,6 +7,9 @@ author:           Simon Hengel <sol@typeful.net>
 maintainer:       Simon Hengel <sol@typeful.net>
 build-type:       Simple
 cabal-version:    >= 1.8
+category:         Testing
+synopsis:         Document and test laws for standard type classes
+description:      Document and test laws for standard type classes
 
 source-repository head
   type: git
@@ -20,7 +23,7 @@ library
   exposed-modules:
       Test.Hspec.Laws
   build-depends:
-      base
+      base == 4.*
     , hspec >= 1.4
     , QuickCheck
 
@@ -34,7 +37,7 @@ test-suite spec
   main-is:
       Spec.hs
   build-depends:
-      base
+      base == 4.*
     , hspec-laws
     , hspec
     , QuickCheck
@@ -47,7 +50,7 @@ test-suite README
   main-is:
       README.lhs
   build-depends:
-      base
+      base == 4.*
     , hspec-laws
     , hspec
     , markdown-unlit
