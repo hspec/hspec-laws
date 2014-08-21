@@ -1,8 +1,8 @@
-name:             hspec-contrib
+name:             hspec-laws
 version:          0.0.0
 license:          MIT
 license-file:     LICENSE
-copyright:        (c) 2012 Simon Hengel
+copyright:        (c) 2012-2014 Simon Hengel
 author:           Simon Hengel <sol@typeful.net>
 maintainer:       Simon Hengel <sol@typeful.net>
 build-type:       Simple
@@ -17,33 +17,33 @@ library
       Test.Hspec.Laws
   build-depends:
       base
-    , hspec >= 1.3
+    , hspec >= 1.4
     , QuickCheck
 
 test-suite spec
   type:
       exitcode-stdio-1.0
   ghc-options:
-      -Wall -Werror
+      -Wall
   hs-source-dirs:
       test
   main-is:
       Spec.hs
   build-depends:
       base
-    , hspec >= 1.4
-    , hspec-contrib
+    , hspec-laws
+    , hspec
     , QuickCheck
 
 test-suite README
   type:
       exitcode-stdio-1.0
   ghc-options:
-      -Wall -Werror -pgmL markdown-unlit
+      -Wall -pgmL markdown-unlit
   main-is:
       README.lhs
   build-depends:
       base
-    , hspec-contrib
-    , hspec >= 1.3
+    , hspec-laws
+    , hspec
     , markdown-unlit
