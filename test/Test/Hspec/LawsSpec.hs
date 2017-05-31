@@ -22,7 +22,7 @@ spec :: Spec
 spec = do
   describe "shouldSatisfyMonoidLaws" $ do
     it "succeeds for a valid Monoid instance" $ do
-      hspecWith defaultConfig (shouldSatisfyMonoidLaws (undefined :: [Int])) `shouldReturn` Summary 3 0
+      hspecWithResult defaultConfig (shouldSatisfyMonoidLaws (undefined :: [Int])) `shouldReturn` Summary 3 0
 
     it "fails for a broken Monoid instance" $ do
-      hspecWith defaultConfig (shouldSatisfyMonoidLaws (undefined :: Minus)) `shouldReturn` Summary 3 2
+      hspecWithResult defaultConfig (shouldSatisfyMonoidLaws (undefined :: Minus)) `shouldReturn` Summary 3 2

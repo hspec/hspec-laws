@@ -6,7 +6,7 @@
 `shouldSatisfyMonoidLaws` can be used to specify, that a given type should
 satisfy the Monoid laws.
 
-~~~ {.haskell .literate}
+```haskell
 -- file Spec.hs
 import Test.Hspec
 import Test.Hspec.Laws
@@ -15,11 +15,11 @@ main :: IO ()
 main = hspec $ do
   describe "List as a Monoid" $
     shouldSatisfyMonoidLaws (undefined :: [Int])
-~~~
+```
 
 Running this produces a nice spec.
 
-~~~
+```
 $ runhaskell Spec.hs
 
 List as a Monoid
@@ -32,4 +32,4 @@ List as a Monoid
 
 Finished in 0.1142 seconds
 3 examples, 0 failures
-~~~
+```
